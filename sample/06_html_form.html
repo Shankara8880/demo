@@ -1,0 +1,90 @@
+<!-- design web page  using advanced HTML form tags
+input time,date,emil,header,footer,spellcheck, editable area
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 40px;
+
+
+        }
+
+        input {
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 2ch;
+            border: none;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            background-color: rgb(139, 139, 205);
+            height: 100vh;
+
+        }
+
+        label {
+            text-decoration: double;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+
+        button {
+            background-color: rgb(171, 235, 94);
+            padding: 10px;
+            border-radius: 10ch;
+            font-weight: bold;
+            border: none;
+
+        }
+
+        button:hover {
+            background-color: rgb(102, 235, 102);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="">
+            <h1 style="margin-bottom: 10px; color: white;">Registration of Newly Born Child</h1>
+            <label for="time">Time</label>
+            <input type="time">
+
+            <label for="date">DOB</label>
+            <input type="date">
+
+            <label for="email">Email</label>
+            <input type="email" placeholder="Enter E-mail">
+
+            <label for="email">Spellcheck</label>
+            <input spellcheck="true" type="text" placeholder="Enter Name..">
+
+            <label for="editable-text">Editable Text</label>
+            <p contenteditable="true">Hello Everyone!!!</p>
+
+            <label style="margin-bottom: 10px;" for="text-area">Subject</label>
+            <textarea style="border-radius: 1ch; padding: 10px;" cols="30" rows="5" placeholder="Enter Text"></textarea>
+
+            <button type="submit" style="color: white; margin-top: 20px;">Submit</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

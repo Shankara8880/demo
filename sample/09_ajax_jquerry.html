@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<html>
+
+<body>
+
+    <div id="demo">
+        <h1>Practicalr</h1>
+        <h2>The XMLHttpRequest Object </h2>
+        <button type="button" onclick="loadDoc()">Change Content</button>
+
+
+        <h1 class="test">JQuery</h1>
+        <button onclick="hideH1()">Click For Hidding JQuery text</button>
+    </div>
+
+    <script>
+
+        // for ajax
+        function loadDoc() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function () {
+                document.getElementById("demo").innerHTML =
+                    this.responseText;
+            }
+            xhttp.open("GET", "09_content.txt");
+            xhttp.send();
+        }
+
+        // Using JQuery
+        const hideH1 = () => {
+            console.log("Helooo Called");
+            $(".test").hide()
+        }
+    </script>
+
+</body>
+
+</html>

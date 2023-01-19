@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* gap: 10px; */
+            box-sizing: border-box;
+
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(57, 158, 221);
+            padding: 20px;
+        }
+
+        input {
+            padding: 10px;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        select {
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 2px;
+            background-color: red;
+            margin: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body style="background-color: gray;">
+    <h1 style="text-align: center;">Feedback Form</h1>
+    <div class="container">
+        <form action="">
+
+            <label for="name">First name</label>
+            <input type="text" placeholder="Enter Your Name" />
+            <label for="text">Last name</label>
+            <input type="text" placeholder="Enter Your Name" />
+            <label for="email">Email Id</label>
+            <input type="email" placeholder="Enter Your Email" />
+            <label for="number">Mobile Number</label>
+            <input type="number" placeholder="Enter Your Number" />
+            <label for="textarea">Comment</label>
+            <textarea cols="50" rows="10"></textarea>
+
+            <select name="" id="">
+                <option value="">Choose Contry</option>
+                <option value="">India</option>
+                <option value="">Pak</option>
+                <option value="">China</option>
+            </select>
+            <button>Submit</button>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

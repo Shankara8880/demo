@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Mouse Events - Button Demo</title>
+</head>
+
+<body>
+    <button id="btn">Click me with any mouse button: left, right, middle,...</button>
+    <h1>
+        <span id="message">....</span> mouse button clicked.
+    </h1>
+
+    <button id="btnKeys">Click me with Alt, Shift, Ctrl pressed</button>
+    <p id="messageKeys"></p>
+
+    <script>
+        let btn = document.querySelector('#btn');
+
+        // disable context menu when right-mouse clicked
+        btn.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+        });
+
+        // show the mouse event message
+        btn.addEventListener('mouseup', (e) => {
+            let msg = document.querySelector('#message');
+            console.log(e.button);
+            switch (e.button) {
+                case 0:
+                    msg.textContent = 'Left';
+                    btn.style.backgroundColor = "red"
+                    message.style.color = "red"
+                    break;
+                case 1:
+                    msg.textContent = 'Middle';
+                    btn.style.backgroundColor = "black"
+                    break;
+                case 2:
+                    msg.textContent = 'Right';
+                    btn.style.backgroundColor = "blue"
+                    message.style.color = "blue"
+                    btn.style.color = "white"
+                    break;
+                default:
+                    msg.textContent = `Unknown mouse button code: ${event.button}`;
+            }
+        });
+
+
+        let btnKeys = document.querySelector('#btnKeys');
+
+        btnKeys.addEventListener('click', (e) => {
+            let keys = [];
+
+            if (e.shiftKey) keys.push('shift');
+            if (e.ctrlKey) keys.push('ctrl');
+            if (e.altKey) keys.push('alt');
+            if (e.metaKey) keys.push('meta');
+
+            let msg = document.querySelector('#messageKeys');
+            msg.textContent = `Keys: ${keys.join('+')}`;
+        });
+    </script>
+</body>
+
+</html>
